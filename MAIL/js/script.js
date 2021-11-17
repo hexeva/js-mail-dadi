@@ -22,29 +22,34 @@ let emailSearch = false;
 
 
 // controllo tutto il contenuto dell'array (mailingList) con un ciclo for:
+
+    // mi creo anche una variabile messaggio
+
 let access;
 
 
 for ( i = 0; i < mailingList.length; i++) {
     // creo una variabile che mi sostituisca per pulizia di codice maininglist[i]
-    let listLength = mailingList[i];
-    // mi creo anche una variabile messaggio
+    let emailList = mailingList[i];
 
 
     // creo un if per verificare che la mail inserita sia presente nella lista array
 
-    if ( listLength === userMail ){
+    if ( emailList === userMail ){
         // a questo punto se la lista dell'array è uguale alla mail inserita dall'utente la variabile flag cambierà in TRUE
         emailSearch = true;
-        access = 'puoi accedere al sito';
 
-    } else {
-        access = 'accesso negato';
-        
     }
 
+}
 
+// a questo punto, creo una if con i messaggi per l'utente a seconda della validazione
 
+if ( emailSearch ) {
+    access = 'Puoi accedere al sito';
+} else {
+
+    access = 'Accesso negato';
 }
 
 // OUTPUT
