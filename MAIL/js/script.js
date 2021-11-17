@@ -22,6 +22,7 @@ let emailSearch = false;
 
 
 // controllo tutto il contenuto dell'array (mailingList) con un ciclo for:
+let access;
 
 
 for ( i = 0; i < mailingList.length; i++) {
@@ -29,7 +30,6 @@ for ( i = 0; i < mailingList.length; i++) {
     let listLength = mailingList[i];
     // mi creo anche una variabile messaggio
 
-     let access;
 
     // creo un if per verificare che la mail inserita sia presente nella lista array
 
