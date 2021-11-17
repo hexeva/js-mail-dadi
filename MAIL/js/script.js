@@ -15,9 +15,38 @@ mailingList.push('nando@email.it');
 let userMail = prompt('Inserisci la tua email');
 console.log(userMail);
 
+
+// creo anche una variabile flag fuori dal ciclo for
+
+let emailSearch = false;
+
+
 // controllo tutto il contenuto dell'array (mailingList) con un ciclo for:
 
+
 for ( i = 0; i < mailingList.length; i++) {
-console.log(mailingList[i]);
+    // creo una variabile che mi sostituisca per pulizia di codice maininglist[i]
+    let listLength = mailingList[i];
+    // mi creo anche una variabile messaggio
+
+     let access;
+
+    // creo un if per verificare che la mail inserita sia presente nella lista array
+
+    if ( listLength === userMail ){
+        // a questo punto se la lista dell'array è uguale alla mail inserita dall'utente la variabile flag cambierà in TRUE
+        emailSearch = true;
+        access = 'puoi accedere al sito';
+
+    } else {
+        access = 'accesso negato';
+        
+    }
+
+
 
 }
+
+// OUTPUT
+
+alert(access);
