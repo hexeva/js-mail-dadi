@@ -13,13 +13,20 @@ console.log(computerRandom);
 
 // STABILISCO IL VINCITORE IN BASE AL PUNTEGGIO PIù ALTO
 
+// creo variabile messaggio
+let message;
+
 if (userRandom > computerRandom) {
 
-    alert('complimenti, lei ha vinto');
+    message = 'complimenti, lei ha vinto';
     
 } else if (userRandom < computerRandom)  {
-    alert('Ha vinto il computer');
+     message = 'Ha vinto il computer';
 
 } else {
-    alert('Pareggio')
+    message = 'Pareggio';
 }
+
+// OUTPUT
+
+alert (message);
